@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class AddProductsToTheBill {
+public class Bill {
     public static Scanner scanner = new Scanner(System.in);
 
     public static void askTheBill() {

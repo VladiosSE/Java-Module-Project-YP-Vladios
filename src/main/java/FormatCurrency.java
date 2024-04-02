@@ -7,7 +7,8 @@ public class FormatCurrency {
 
         if (lastTwoDigits >= 11 && lastTwoDigits <= 14) {
             currency = "рублей";
-        } else if (lastDigit == 1) {
+        }
+        else if (lastDigit == 1) {
             currency = "рубль";
         } else if (lastDigit >= 2 && lastDigit <= 4) {
             currency = "рубля";

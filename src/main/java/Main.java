@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        AddProductsToTheBill.askTheBill();
+        Bill.askTheBill();
         Calculator.addProductsToTheList();
 
         Calculator.printItems();
