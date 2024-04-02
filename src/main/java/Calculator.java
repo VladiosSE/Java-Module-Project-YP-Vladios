@@ -21,8 +21,8 @@ public class Calculator {
                 if (scanner.hasNextDouble()) {
                     price = scanner.nextDouble();
 
-                    while (price < 0) {
-                        System.out.println("Вы ввели отрицательное число, попробуйте снова. \nВведите стоимость товара:");
+                    while (price <= 0) {
+                        System.out.println("Вы ввели отрицательное число, или ноль. Попробуйте снова. \nВведите стоимость товара:");
                         price = scanner.nextDouble();
                     }
                     break;

@@ -4,21 +4,22 @@ public class AddProductsToTheBill {
     public static Scanner scanner = new Scanner(System.in);
 
     public static void askTheBill() {
+        int value = 0;
         System.out.println("На сколько человек разделить счет?");
 
-        while (!scanner.hasNextInt()) {
-            System.out.println("Некорректное значение. Попробуйте ввести еще раз");
-            scanner.next();
-        }
-        int value = scanner.nextInt();
+        while (true) {
+            if (scanner.hasNextInt()) {
+                value = scanner.nextInt();
 
-        while (value < 0) {
-            System.out.println("Некорректное значение. Попробуйте ввести еще раз");
-            while (!scanner.hasNextInt()) {
-                System.out.println("Некорректное значение. Попробуйте ввести число.");
+                if (value > 0) {
+                    break;
+                } else {
+                    System.out.println("Вы ввели отрицательное число, или ноль. Попробуйте снова. \nНа сколько человек разделить счет?");
+                }
+            } else {
+                System.out.println("Введенное значение не int. Попробуйте еще раз. \nНа сколько человек разделить счет?");
                 scanner.next();
             }
-            value = scanner.nextInt();
         }
         Calculator.numberOfPerson = value;
     }
