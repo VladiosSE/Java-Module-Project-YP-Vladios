@@ -11,10 +11,10 @@ public class Bill {
             if (scanner.hasNextInt()) {
                 value = scanner.nextInt();
 
-                if (value > 0) {
+                if (value > 1) {
                     break;
                 } else {
-                    System.out.println("Вы ввели отрицательное число, или ноль. Попробуйте снова. \nНа сколько человек разделить счет?");
+                    System.out.println("Вы ввели отрицательное число, ноль, или 1. Попробуйте снова. \nНа сколько человек разделить счет?");
                 }
             } else {
                 System.out.println("Введенное значение не int. Попробуйте еще раз. \nНа сколько человек разделить счет?");

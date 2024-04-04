@@ -6,7 +6,6 @@ public class Calculator {
     public static Scanner scanner = new Scanner(System.in);
     public static double bill = 0;
     public static int numberOfPerson;
-    public static boolean finishOrder = scanner.next().equalsIgnoreCase("Завершить");
 
     public static void addProductsToTheList() {
         double price = 0;
@@ -36,7 +35,7 @@ public class Calculator {
             System.out.println("Товар " + name + " стоимостью " + price + " добавлен в список");
             System.out.println("Хотите добавить еще один товар? \n-Да\n-Завершить");
 
-        } while (!finishOrder);
+        } while (!scanner.next().equalsIgnoreCase("Завершить"));
     }
 
     public static double calculate() {
